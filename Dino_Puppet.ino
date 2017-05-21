@@ -122,9 +122,10 @@ void loop() {
     break;
 
     case EYES:
-    servos[1].write(180);
+		int temp = servos[1].read();
+    servos[1].write(90);
 		delay(100);
-		servos[1].write(0);
+		servos[1].write(temp);
     break;
 		
 		case EYEstart:
