@@ -1,6 +1,5 @@
 package com.led_on_off.led;
 
-import android.content.pm.ActivityInfo;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -68,7 +67,7 @@ public class dinoControl extends ActionBarActivity {
         address = getIntent().getStringExtra(DeviceList.EXTRA_ADDRESS); //receive the address of the bluetooth device
 
         //view of the dinoControl
-        setContentView(R.layout.activity_led_control);
+        setContentView(R.layout.activity_dino_control);
 
         //call the widgets
         Discnt = (ImageButton) findViewById(R.id.discnt);
@@ -85,6 +84,8 @@ public class dinoControl extends ActionBarActivity {
         Eyes = (SeekBar) findViewById(R.id.eyes);
         Jaw = (SeekBar) findViewById(R.id.jaw);
 
+        Blink = (Button) findViewById(R.id.blink);
+
         new ConnectBT().execute(); //Call the class to connect
 
         //commands to be sent to bluetooth
@@ -92,6 +93,13 @@ public class dinoControl extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Disconnect(); //close connection
+            }
+        });
+
+        Blink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendByte(EYES);
             }
         });
 

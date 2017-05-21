@@ -46,7 +46,6 @@
         android:src="@drawable/facebook_70x70"
         android:onClick="fb"
         android:background="@null"
-        android:id="@+id/facebook"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/abt_txt"
         android:layout_toStartOf="@+id/abt_txt" />
@@ -56,7 +55,6 @@
         android:layout_height="wrap_content"
         android:src="@drawable/twitter_70x70"
         android:onClick="tweet"
-        android:id="@+id/twitter"
         android:background="@null"
         android:layout_alignBottom="@+id/instagram"
         android:layout_centerHorizontal="true" />
@@ -75,7 +73,6 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/website"
         android:onClick="web"
         android:src="@drawable/website_75x75"
         android:background="@null"
