@@ -129,12 +129,16 @@ void loop() {
 		
 		case EYEstart:
 		while(Serial.available() <= 0) {} // Wait for the next byte to arrive
-		servos[1].write(Serial.read());
+		inByte = Serial.read();
+		if(DEBUG) Serial.println((int)inByte);
+		servos[1].write(inByte);
 		break;
 		
 		case MOUTHstart:
 		while(Serial.available() <= 0) {} // Wait for the next byte to arrive
-		servos[0].write(Serial.read());
+		inByte = Serial.read();
+		if(DEBUG) Serial.println((int)inByte);
+		servos[0].write(inByte);
 		break;
     
     default:
