@@ -79,6 +79,15 @@
         android:text="Right" />
 
     <Button
+        android:id="@+id/blink"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@color/primary_material_dark"
+        android:text="Blink" />
+
+    <Button
         android:id="@+id/down"
         android:layout_width="150dp"
         android:layout_height="50dp"
@@ -98,13 +107,13 @@
 
     <ImageButton
         android:id="@+id/discnt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="@null"
-        android:src="@drawable/disconnect" />
+        android:src="@mipmap/back" />
 
     <ImageButton
         android:id="@+id/abt"

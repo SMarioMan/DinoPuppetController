@@ -29,7 +29,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="#e75238" />
+        android:background="#01579B" />
 
     <ListView
         android:layout_width="wrap_content"
@@ -41,11 +41,13 @@
         android:layout_above="@+id/button" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/imageView"
-        android:src="@drawable/cover"
-        android:layout_below="@+id/textView"
+        android:src="@mipmap/cover"
+        android:layout_alignTop="@+id/listView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_toRightOf="@+id/textView"
         android:layout_toEndOf="@+id/textView" />
 
