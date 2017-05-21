@@ -110,7 +110,7 @@ void loop() {
     break;
     
     case DOWN2: 
-    motors[0]->run(BACKWARDFORWARD);
+    motors[0]->run(FORWARD);
     break;
 		
 		case VERTSTOP2: 
