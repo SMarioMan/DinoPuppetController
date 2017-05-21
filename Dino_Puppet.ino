@@ -106,11 +106,11 @@ void loop() {
     break;
 		
 		case UP2:
-    motors[0]->run(FORWARD);
+    motors[0]->run(BACKWARD);
     break;
     
     case DOWN2: 
-    motors[0]->run(BACKWARD);
+    motors[0]->run(BACKWARDFORWARD);
     break;
 		
 		case VERTSTOP2: 
@@ -126,7 +126,7 @@ void loop() {
     case EYES:
 		temp = servos[1].read();
     servos[1].write(90);
-		delay(100);
+		delay(200);
 		servos[1].write(temp);
     break;
 		
