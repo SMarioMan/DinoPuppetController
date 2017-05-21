@@ -45,6 +45,8 @@ Adafruit_DCMotor *motors[MOTOR_COUNT];
 // Our array of servos
 Servo servos[SERVO_COUNT];
 
+int temp;
+
 void setup() {
 	
   // Initialize motors
@@ -122,7 +124,7 @@ void loop() {
     break;
 
     case EYES:
-		int temp = servos[1].read();
+		temp = servos[1].read();
     servos[1].write(90);
 		delay(100);
 		servos[1].write(temp);
