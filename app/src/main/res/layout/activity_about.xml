@@ -31,50 +31,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="The LED controller application is developed by Mayoogh Girish\nThis application allows you to control a LED on your Arduino board "
+        android:text="This app was designed by SMarioMan. It was made to enable Bluetooth communication between an Android phone and a dinosaur puppet motorized via an Arduino. Click the button below to learn more. "
         android:id="@+id/textView4"
         android:textSize="22dp"
         android:textColor="#bf3951"
         android:layout_below="@+id/developer"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="30dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/facebook_70x70"
-        android:onClick="fb"
-        android:background="@null"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/abt_txt"
-        android:layout_toStartOf="@+id/abt_txt" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/twitter_70x70"
-        android:onClick="tweet"
-        android:background="@null"
-        android:layout_alignBottom="@+id/instagram"
-        android:layout_centerHorizontal="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/instagram"
-        android:onClick="insta"
-        android:src="@drawable/instagram_70x70"
-        android:background="@null"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/abt_txt"
-        android:layout_toEndOf="@+id/abt_txt" />
+        android:layout_alignParentEnd="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="web"
-        android:src="@drawable/website_75x75"
+        android:src="@drawable/github"
         android:background="@null"
         android:layout_below="@+id/textView4"
         android:layout_centerHorizontal="true" />

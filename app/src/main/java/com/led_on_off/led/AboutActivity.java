@@ -37,7 +37,7 @@ public class AboutActivity extends ActionBarActivity
 
     public void web(View view)
     {
-        Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://igniteinnovateideas.wordpress.com/"));
+        Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/SMarioMan/DinoPuppetController/"));
         startActivity(webIntent);
     }
 }

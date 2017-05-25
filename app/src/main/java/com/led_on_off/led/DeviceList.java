@@ -22,12 +22,11 @@ import java.util.Set;
 public class DeviceList extends ActionBarActivity
 {
     //widgets
-    Button btnPaired;
-    ListView devicelist;
+    private Button btnPaired;
+    private ListView devicelist;
     //Bluetooth
     private BluetoothAdapter myBluetooth = null;
-    private Set<BluetoothDevice> pairedDevices;
-    public static String EXTRA_ADDRESS = "device_address";
+    public static final String EXTRA_ADDRESS = "device_address";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -69,7 +68,7 @@ public class DeviceList extends ActionBarActivity
 
     private void pairedDevicesList()
     {
-        pairedDevices = myBluetooth.getBondedDevices();
+        Set<BluetoothDevice> pairedDevices = myBluetooth.getBondedDevices();
         ArrayList list = new ArrayList();
 
         if (pairedDevices.size()>0)
@@ -90,7 +89,7 @@ public class DeviceList extends ActionBarActivity
 
     }
 
-    private AdapterView.OnItemClickListener myListClickListener = new AdapterView.OnItemClickListener()
+    private final AdapterView.OnItemClickListener myListClickListener = new AdapterView.OnItemClickListener()
     {
         public void onItemClick (AdapterView<?> av, View v, int arg2, long arg3)
         {

@@ -26,29 +26,26 @@ import java.util.UUID;
 public class dinoControl extends ActionBarActivity {
 
     // Button btnOn, btnOff, btnDis;
-    ImageButton Discnt, Abt;
-    ImageButton Up, Up2, Down, Down2, Left, Right, Mouth, Blink;
-    SeekBar Eyes, Jaw;
-    String address = null;
+    private ImageButton Discnt;
+    private ImageButton Abt;
+    private ImageButton Up;
+    private ImageButton Up2;
+    private ImageButton Down;
+    private ImageButton Down2;
+    private ImageButton Left;
+    private ImageButton Right;
+    ImageButton Mouth;
+    private ImageButton Blink;
+    private SeekBar Eyes;
+    private SeekBar Jaw;
+    private String address = null;
     private ProgressDialog progress;
-    BluetoothAdapter myBluetooth = null;
-    BluetoothSocket btSocket = null;
+    private BluetoothAdapter myBluetooth = null;
+    private BluetoothSocket btSocket = null;
     private boolean isBtConnected = false;
     //SPP UUID. Look for it
-    static final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+    private static final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
-    // A list of commands that can be sent to the Arduino. At present, we can assign up to 256 distinct commands
-    private final byte UP = 0;
-    private final byte VERTSTOP = 1;
-    private final byte DOWN = 2;
-    // Additional Up-Down movement
-    private final byte UP2 = 3;
-    private final byte VERTSTOP2 = 4;
-    private final byte DOWN2 = 5;
-    // Side to side movement
-    private final byte LEFT = 6;
-    private final byte HORIZSTOP = 7;
-    private final byte RIGHT = 8;
     // Special servo actions
     private final byte MOUTH = 9;
     private final byte EYES = 10;
@@ -141,11 +138,20 @@ public class dinoControl extends ActionBarActivity {
             }
         });
 
+        byte VERTSTOP = 1;
+        byte UP = 0;
         makeListener(Up, UP, VERTSTOP);
+        byte DOWN = 2;
         makeListener(Down, DOWN, VERTSTOP);
+        byte HORIZSTOP = 7;
+        byte LEFT = 6;
         makeListener(Left, LEFT, HORIZSTOP);
+        byte RIGHT = 8;
         makeListener(Right, RIGHT, HORIZSTOP);
+        byte VERTSTOP2 = 4;
+        byte UP2 = 3;
         makeListener(Up2, UP2, VERTSTOP2);
+        byte DOWN2 = 5;
         makeListener(Down2, DOWN2, VERTSTOP2);
 
     }
