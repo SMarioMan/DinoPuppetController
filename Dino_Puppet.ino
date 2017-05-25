@@ -32,6 +32,8 @@ const byte RIGHT = 8;
 // Special servo actions
 const byte MOUTH = 9;
 const byte EYES = 10;
+// Demo mode
+const byte DEMO = 11;
 // Start listening for an int
 const byte MOUTHstart = 100;
 const byte EYEstart = 102;
@@ -45,7 +47,7 @@ Adafruit_DCMotor *motors[MOTOR_COUNT];
 // Our array of servos
 Servo servos[SERVO_COUNT];
 
-int temp;
+int temp, temp2;
 
 void setup() {
 
@@ -142,6 +144,17 @@ void loop() {
 		inByte = Serial.read();
 		if(DEBUG) Serial.println((int)inByte);
 		servos[0].write(inByte);
+		break;
+		
+		case DEMO:
+		// Stop any motors that may be running
+		motors[0]->run(RELEASE);
+		motors[1]->run(RELEASE);
+		motors[2]->run(RELEASE);
+		// Save the servo values before we start changing them
+		temp = servos[0].read();
+		temp2 = servos[1].read();
+		// TODO: Run the actual demo
 		break;
 
 		default:
