@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1d4851"
+    android:background="@drawable/dino"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -13,118 +13,200 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:text="Dino Controller"
-        android:textColor="#ffffff"
+        android:textColor="#FFFFFF"
         android:textSize="20dp" />
 
     <SeekBar
         android:id="@+id/eyes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/up"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/up2"
-        android:layout_toLeftOf="@+id/up2"
-        android:layout_toStartOf="@+id/up2" />
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/up2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:progressTint="@color/orange"
+        android:thumbTint="@color/orange" />
 
     <SeekBar
         android:id="@+id/jaw"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/up"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:progressTint="@color/orange"
+        android:thumbTint="@color/orange" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/up"
+        android:layout_above="@id/jaw"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Mouth" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/eyes"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/up2"
-        android:layout_toEndOf="@+id/up2"
-        android:layout_toRightOf="@+id/up2" />
+        android:text="Eyes" />
 
-    <Button
-        android:id="@+id/up2"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_above="@+id/up"
-        android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/primary_material_dark"
-        android:text="Up2" />
+    <ImageButton
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-    <Button
-        android:id="@+id/up"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_above="@+id/left"
-        android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/primary_material_dark"
-        android:text="Up" />
-
-    <Button
-        android:id="@+id/left"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
         android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:backgroundTint="@color/primary_material_dark"
-        android:text="Left" />
+        android:layout_below="@+id/up2"
+        android:layout_marginLeft="100dp"
+        android:background="@null"
+        android:rotation="270"
+        android:src="@drawable/blanksquare" />
 
-    <Button
+    <ImageButton
+        android:id="@+id/up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/center"
+        android:layout_alignLeft="@+id/center"
+        android:layout_alignStart="@+id/center"
+        android:background="@null"
+        android:rotation="90"
+        android:src="@drawable/arrowbutton" />
+
+    <ImageButton
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/right"
+        android:layout_alignRight="@+id/right"
+        android:layout_below="@+id/up"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@null"
+        android:rotation="0"
+        android:src="@drawable/arrowbutton" />
+
+    <ImageButton
         android:id="@+id/right"
-        android:layout_width="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/center"
+        android:layout_toEndOf="@+id/center"
+        android:layout_toRightOf="@+id/center"
+        android:background="@null"
+        android:rotation="180"
+        android:src="@drawable/arrowbutton" />
+
+    <ImageButton
+        android:id="@+id/down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/center"
+        android:layout_alignStart="@+id/center"
+        android:layout_below="@+id/center"
+        android:background="@null"
+        android:rotation="270"
+        android:src="@drawable/arrowbutton" />
+
+    <ImageButton
+        android:id="@+id/blink"
+        android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:src="@drawable/blinkbutton" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/blink"
+        android:layout_toLeftOf="@+id/blink"
+        android:layout_toStartOf="@+id/blink"
+        android:text="Blink" />
+
+    <ImageButton
+        android:id="@+id/center2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:backgroundTint="@color/primary_material_dark"
-        android:text="Right" />
+        android:layout_marginRight="100dp"
+        android:background="@null"
+        android:rotation="270"
+        android:src="@drawable/blanksquare" />
 
-    <Button
-        android:id="@+id/blink"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/primary_material_dark"
-        android:text="Blink"
-        android:layout_alignTop="@+id/discnt"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    <ImageButton
+        android:id="@+id/up2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/center2"
+        android:layout_alignLeft="@+id/center2"
+        android:layout_alignStart="@+id/center2"
+        android:background="@null"
+        android:rotation="90"
+        android:src="@drawable/arrowbutton" />
 
-    <Button
-        android:id="@+id/down"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/left"
-        android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/primary_material_dark"
-        android:text="Down" />
-
-    <Button
+    <ImageButton
         android:id="@+id/down2"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/down"
-        android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/primary_material_dark"
-        android:text="Down2" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/center2"
+        android:layout_alignStart="@+id/center2"
+        android:layout_below="@+id/center2"
+        android:background="@null"
+        android:rotation="270"
+        android:src="@drawable/arrowbutton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/down"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/down"
+        android:layout_toStartOf="@+id/down"
+        android:text="Neck 1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/down2"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/down2"
+        android:layout_toStartOf="@+id/down2"
+        android:text="Neck 2" />
 
     <ImageButton
         android:id="@+id/discnt"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:adjustViewBounds="true"
         android:background="@null"
-        android:src="@mipmap/back" />
+        android:scaleType="fitCenter"
+        android:src="@drawable/disconnect" />
 
     <ImageButton
         android:id="@+id/abt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
         android:background="@null"
         android:onClick="about"
+        android:scaleType="fitCenter"
         android:src="@drawable/about" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
 
 </RelativeLayout>

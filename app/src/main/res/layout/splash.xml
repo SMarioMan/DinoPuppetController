@@ -3,22 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:orientation="vertical"
-    android:background="#01579B">
+    android:background="#01579B"
+    android:orientation="vertical">
 
     <ImageView
         android:layout_width="252dp"
         android:layout_height="252dp"
-        android:src="@mipmap/dino"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="135dp"
-        android:layout_gravity="center_horizontal" />
+        android:src="@drawable/dino" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Dino Controller"
-        android:textSize="35dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:layout_gravity="center_horizontal" />
+        android:text="Dino Controller"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="35dp" />
 </LinearLayout>

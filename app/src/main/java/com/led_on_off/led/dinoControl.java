@@ -27,7 +27,7 @@ public class dinoControl extends ActionBarActivity {
 
     // Button btnOn, btnOff, btnDis;
     ImageButton Discnt, Abt;
-    Button Up, Up2, Down, Down2, Left, Right, Mouth, Blink;
+    ImageButton Up, Up2, Down, Down2, Left, Right, Mouth, Blink;
     SeekBar Eyes, Jaw;
     String address = null;
     private ProgressDialog progress;
@@ -74,17 +74,17 @@ public class dinoControl extends ActionBarActivity {
         Abt = (ImageButton) findViewById(R.id.abt);
 
         // Call custom widgets
-        Up = (Button) findViewById(R.id.up);
-        Up2 = (Button) findViewById(R.id.up2);
-        Down = (Button) findViewById(R.id.down);
-        Down2 = (Button) findViewById(R.id.down2);
-        Left = (Button) findViewById(R.id.left);
-        Right = (Button) findViewById(R.id.right);
+        Up = (ImageButton) findViewById(R.id.up);
+        Up2 = (ImageButton) findViewById(R.id.up2);
+        Down = (ImageButton) findViewById(R.id.down);
+        Down2 = (ImageButton) findViewById(R.id.down2);
+        Left = (ImageButton) findViewById(R.id.left);
+        Right = (ImageButton) findViewById(R.id.right);
 
         Eyes = (SeekBar) findViewById(R.id.eyes);
         Jaw = (SeekBar) findViewById(R.id.jaw);
 
-        Blink = (Button) findViewById(R.id.blink);
+        Blink = (ImageButton) findViewById(R.id.blink);
 
         new ConnectBT().execute(); //Call the class to connect
 
@@ -150,7 +150,7 @@ public class dinoControl extends ActionBarActivity {
 
     }
 
-    private void makeListener(Button button, final byte pressed, final byte released) {
+    private void makeListener(ImageButton button, final byte pressed, final byte released) {
         button.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
